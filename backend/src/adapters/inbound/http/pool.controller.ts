@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { PrismaPoolRepository } from "../../outbound/postgres/PrismaPoolRepository";
-import { createPool } from "../../../core/application/usecases/createPool";
+import { PrismaPoolRepository } from "../../outbound/postgres/PrismaPoolRepository.ts";
+import { createPool } from "../../../core/application/usecases/createPool.ts";
 
 const router = Router();
 const repo = new PrismaPoolRepository();

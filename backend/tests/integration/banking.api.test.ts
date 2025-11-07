@@ -1,5 +1,5 @@
 import request from "supertest";
-import app from "../../src/server/app";
+import app from "../../src/server/app.ts";
 
 describe("Banking API", () => {
   it("prevents applying more than banked", async () => {
@@ -8,7 +8,6 @@ describe("Banking API", () => {
       year: 2025,
       amount: 100
     });
-
     expect(res.status).toBe(400);
   });
 });

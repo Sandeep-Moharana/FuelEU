@@ -1,4 +1,4 @@
-import { Route } from "../domain/Route";
+import { Route } from "../domain/Route.ts".ts"";
 
 export interface RouteRepository {
   getAll(): Promise<Route[]>;

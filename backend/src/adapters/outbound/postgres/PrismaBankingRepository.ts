@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { BankingRepository } from "../../../core/ports/BankingRepository";
+import { BankingRepository } from "../../../core/ports/BankingRepository.ts";
 
 const prisma = new PrismaClient();
 
@@ -8,11 +8,9 @@ export class PrismaBankingRepository implements BankingRepository {
     const entries = await prisma.bankEntry.findMany({ where: { shipId, year } });
     return entries.reduce((sum, e) => sum + e.amount, 0);
   }
-
   async bank(shipId: string, year: number, amount: number) {
     await prisma.bankEntry.create({ data: { shipId, year, amount } });
   }
-
   async apply(shipId: string, year: number, amount: number) {
     await prisma.bankEntry.create({ data: { shipId, year, amount: -amount } });
   }

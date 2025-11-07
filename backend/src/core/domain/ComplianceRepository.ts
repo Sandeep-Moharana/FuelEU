@@ -1,4 +1,4 @@
-import { ShipCompliance } from "../domain/Compliance";
+import { ShipCompliance } from "../domain/Compliance.ts".ts"";
 
 export interface ComplianceRepository {
   saveCompliance(cb: ShipCompliance): Promise<void>;

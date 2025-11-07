@@ -1,4 +1,4 @@
-import { Route } from "../../domain/Route";
+import { Route } from "../../domain/Route.ts".ts"";
 
 export function computeComparison(baseline: Route, others: Route[]) {
   return others.map(route => {

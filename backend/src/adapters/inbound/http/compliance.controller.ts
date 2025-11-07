@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { computeCB } from "../../../core/application/usecases/computeCB";
-import { PrismaComplianceRepository } from "../../outbound/postgres/PrismaComplianceRepository";
+import { computeCB } from "../../../core/application/usecases/computeCB.ts";
+import { PrismaComplianceRepository } from "../../outbound/postgres/PrismaComplianceRepository.ts";
 
 const router = Router();
 const repo = new PrismaComplianceRepository();
@@ -16,7 +16,6 @@ router.get("/cb", async (req, res) => {
     Number(intensity),
     Number(fuel)
   );
-
   await repo.saveCompliance(cb);
   res.json(cb);
 });

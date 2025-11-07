@@ -1,5 +1,5 @@
 import request from "supertest";
-import app from "../../src/server/app";
+import app from "../../src/server/app.ts";
 
 describe("Pool API", () => {
   it("rejects negative pool sum", async () => {
@@ -10,7 +10,6 @@ describe("Pool API", () => {
         { shipId: "S2", cbBefore: 10 }
       ]
     });
-
     expect(res.status).toBe(400);
   });
 });

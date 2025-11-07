@@ -1,5 +1,5 @@
 import request from "supertest";
-import app from "../../src/server/app";
+import app from "../../src/server/app.ts";
 
 describe("Routes API", () => {
   it("GET /routes returns list", async () => {
