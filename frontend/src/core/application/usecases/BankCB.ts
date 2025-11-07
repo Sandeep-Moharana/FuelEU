@@ -1,4 +1,4 @@
-import { BankingPort } from "../../ports/BankingPort";
+import { BankingPort } from "../../ports/BankingPort.ts";
 
 export function bankCBUseCase(bankingPort: BankingPort) {
   return (shipId: string, year: number, amount: number) =>
